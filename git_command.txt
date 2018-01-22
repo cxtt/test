@@ -10,3 +10,4 @@ git reset --hard 版本号  //重置错误可以返回到某个版本
 git reset --hard HEAD^  //回退到上一个版本
 git reflog   //后悔药，哈哈  用来记录每一次的命令
 gti checkout -- readme.txt  // 命令中的 -- 很重要，没有--就变成了切换到另一分支命令
+git reset HEAD file  当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令git reset HEAD file，就回到了场景1，第二步按场景1操作
