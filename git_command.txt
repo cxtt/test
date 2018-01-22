@@ -9,3 +9,4 @@ git checkout master
 git reset --hard 版本号  //重置错误可以返回到某个版本
 git reset --hard HEAD^  //回退到上一个版本
 git reflog   //后悔药，哈哈  用来记录每一次的命令
+gti checkout -- readme.txt  // 命令中的 -- 很重要，没有--就变成了切换到另一分支命令
