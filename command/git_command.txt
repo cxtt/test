@@ -9,7 +9,7 @@ git checkout master
 git reset --hard 版本号  //重置错误可以返回到某个版本
 git reset --hard HEAD^  //回退到上一个版本
 git reflog   //后悔药，哈哈  用来记录每一次的命令
-gti checkout -- readme.txt  // 命令中的 -- 很重要，没有--就变成了切换到另一分支命令
+gti checkout -- readme.txt  // 命令中的 -- 很重要，没有--就变成了切换到另一分支命令  没提交可撤销修改
 git reset HEAD file  当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令git reset HEAD file，就回到了场景1，第二步按场景1操作
 git checkout -b dev  //创建dev分支，然后切换到dev分支
 git checkout 命令加上 -b 参数表示创建并切换，相当于一下两条命令
@@ -35,6 +35,17 @@ git merge --no-ff -m "merge with no-ff" dev
 加上--no-ff参数使用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，
 而fast forward合并就看不出来曾经做过合并
 
+git stash  // 该功能可以把当前工作现场'储藏'起来，等恢复现场后继续工作
+
+工作现场还在，git把stash内容存在某个地方了，但是需要恢复一下，有两个办法
+1 git stash apply恢复，但是stash内容并不删除
+  需用git stash drop 来删除
+2 git stash pop，恢复的同时把stash内容也删除了
+
+git stash list 查看stash内容
+
+可以多次stash，恢复的时候，先用git stash list查看，恢复指定的stash，用命令
+git stash apply stash@{0}
 
 
 
