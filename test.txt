@@ -3,3 +3,5 @@ aaaaaa
 edit one time on home.
 edit one time on master.
 edit one time on company.
+
+test command git merge --no-ff -m "merge with no-ff" dev
