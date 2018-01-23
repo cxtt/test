@@ -11,3 +11,23 @@ git reset --hard HEAD^  //回退到上一个版本
 git reflog   //后悔药，哈哈  用来记录每一次的命令
 gti checkout -- readme.txt  // 命令中的 -- 很重要，没有--就变成了切换到另一分支命令
 git reset HEAD file  当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令git reset HEAD file，就回到了场景1，第二步按场景1操作
+git checkout -b dev  //创建dev分支，然后切换到dev分支
+git checkout 命令加上 -b 参数表示创建并切换，相当于一下两条命令
+    git branch dev
+    git checkout dev
+git branch   // 查看当前分支  列出所有分支，当前分支前面会标一个*号
+git merge dev 把dev分支的工作合并到master分支上，在master分支上操作
+
+合并完成后，放心删除dev分支
+git branch -d dev
+[
+查看分支:git branch
+创建分支:git branch <name>
+切换分支:git checkout <name>
+创建+切换分支:git checkout -b <name>
+合并某分支到当前分支: git merge <name>
+删除分支: git branch -d <name>
+]
+
+
+
