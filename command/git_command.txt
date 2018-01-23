@@ -75,7 +75,20 @@ git tag -s <tagname> -m "blablabla..."可以用PGP签名标签；
 
 命令git push origin :refs/tags/<tagname>可以删除一个远程标签。
 
+git remote add origin repository_address
+使用该命令git remote add 把它和码云的远程库关联之后就可以正常的push和pull
 
+如果使用git remote add时报错，说明本地库已经关联了一个名叫origin的远程库
+  用 git remote -v 查看远程库信息
+
+删除已有远程库
+git remote rm origin
+在关联需要的远程库
+
+关联多个远程库，需起不同的名字(add 时 指定即可)
+
+推送时 git push github master
+       git push gitee master
 
 
 
