@@ -29,5 +29,4 @@ git branch -d dev
 删除分支: git branch -d <name>
 ]
 
-
-
+git log --graph --pretty=oneline --abbrev-commit  // 查看合并分支的情况
