@@ -30,3 +30,11 @@ git branch -d dev
 ]
 
 git log --graph --pretty=oneline --abbrev-commit  // 查看合并分支的情况
+git merge --no-ff -m "merge with no-ff" dev
+合并dev分支， --no-ff参数，表示禁用Fast forward
+加上--no-ff参数使用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，
+而fast forward合并就看不出来曾经做过合并
+
+
+
+
