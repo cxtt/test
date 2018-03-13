@@ -90,6 +90,12 @@ git remote rm origin
 推送时 git push github master
        git push gitee master
 
+查看远程分支
+git branch -r 
+git branch -a
 
+删除远程分支
+git branch -r -d origin/branch-name
+git push origin :branch-name
 
 
